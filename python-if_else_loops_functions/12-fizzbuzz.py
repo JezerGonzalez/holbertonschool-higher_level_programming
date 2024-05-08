@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def fizzbuzz():
-    for idx in range (1, 101):
+    for idx in range(1, 101):
         if idx % 15 == 0:
             print("FizzBuzz ", end="")
         elif idx % 3 == 0:
