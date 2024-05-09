@@ -3,8 +3,8 @@ from sys import argv
 result = 0
 if __name__ == "__main__":
     if len(argv) == 1:
-        print("0")
+        print(result)
     else:
-        result += int(argv)
-        print("{}".format(result))
-        
+        for i in range(1, len(argv)):
+            result += int(argv[i])
+        print(result)
