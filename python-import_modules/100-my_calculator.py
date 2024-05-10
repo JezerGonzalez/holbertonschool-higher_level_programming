@@ -8,7 +8,7 @@ if __name__ == "__main__":
         print("Unknown operator. Available operators: +, -, * and /")
         exit(1)
     if argv[2] not in list(operations.keys()):
-        print("Unknown operator. Available operators: +, -, * and /")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         exit(1)
 
     a = int(argv[1])
