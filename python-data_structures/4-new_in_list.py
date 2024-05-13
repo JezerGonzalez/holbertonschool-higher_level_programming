@@ -7,4 +7,3 @@ def new_in_list(my_list, idx, element):
         elif index == idx:
             new_list[index] = element
             return new_list
-            
