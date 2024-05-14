@@ -6,4 +6,5 @@ def search_replace(my_list, search, replace):
             new[idx] = replace
         else:
             new[idx] = my_list[idx]
+
     return new
