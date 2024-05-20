@@ -1,31 +1,35 @@
 #!/usr/bin/python3
 """
-This is a method for dividing a list of a list
+Module Name: 2-matrix_divided
+Description: Divides all elements of a matrix
+Authors: Lusanco, Ltoro9, Antoniofdjs, Livanhernandez Date: Feb 01 2024
 """
 
 
 def matrix_divided(matrix, div):
-    """
-    Validates both lists are integers or floats to then divide them
-    """
+    """Description: Divides all elements of a matrix
+    - matrix (list): 2d array.
+    - div (int or float): Number to divide by."""
 
-    matrix_err = "matrix must be a matrix (list of lists) of integers/floats"
-    size_error = "Each row of the matrix must have the same size"
+    mtx = "matrix must be a matrix (list of lists) of integers/floats"
+    siz = "Each row of the matrix must have the same size"
     result = []
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
+
     if div == 0:
-        raise ZeroDivisionError("div cannot be 0")
-    for list in matrix:
-        if len(list) != len(matrix[0]):
-            raise TypeError(size_error)
-        result_list = []
-        for elements in list:
-            if not isinstance(elements, (int, float)):
-                raise TypeError(matrix_err)
+        raise ZeroDivisionError("division by zero")
+
+    for lists in matrix:
+        if len(lists) != len(matrix[0]):
+            raise TypeError(siz)
+        inner = []
+        for elem in lists:
+            if not isinstance(elem, (int, float)):
+                raise TypeError(mtx)
             else:
-                result_list.append(round(elements / div, 2))
-        result.append(result_list)
+                inner.append(round(elem / div, 2))
+        result.append(inner)
 
     return result
