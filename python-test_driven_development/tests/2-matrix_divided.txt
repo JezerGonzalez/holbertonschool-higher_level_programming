@@ -21,7 +21,7 @@ matrix must be a matrix (list of lists) of integers/floats
 ...     matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
 ... except ZeroDivisionError as e:
 ...     print(e)
-div cannot be 0
+division by zero
 
 >>> matrix = [[1, 2, 3], [4, 5, 6]]
     >>> print(matrix_divided(matrix, -3))
