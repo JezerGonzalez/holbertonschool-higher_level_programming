@@ -61,7 +61,7 @@ class Rectangle:
         if self.__height == 0 or self.__width == 0:
             return string
         for index in range(self.__height):
-            string += "#" * self.__width 
+            string += "#" * self.__width
             if index + 1 < self.__height:
                 string += "\n"
         return string
