@@ -1,0 +1,1 @@
+Creating a rectangle with classes
