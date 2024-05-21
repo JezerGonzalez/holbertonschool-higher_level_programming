@@ -6,4 +6,3 @@ class Rectangle:
     """Start of the rectangle class"""
     def __init__(self):
         pass
-    
