@@ -56,10 +56,12 @@ class Rectangle:
         return 2 * (self.__height + self.__width)
 
     def __str__(self):
-        """Que se me pegue el culo"""
+        """Prints the rectangle"""
         string = ""
         if self.__height == 0 or self.__width == 0:
             return string
-        for idex in range(self.__height):
-            string += "#" * self.__width + "\n"
+        for index in range(self.__height):
+            string += "#" * self.__width 
+            if index + 1 < self.__height:
+                string += "\n"
         return string
