@@ -9,7 +9,12 @@ BaseGeometry class for any and all edge cases.
 >>> bg = BaseGeometry()
 
 >>> bg.integer_validator("my_int", 12)
+>>> print(f"my name is {bg.name}")
+my name is my_int
+
 >>> bg.integer_validator("width", 89)
+>>> print(f"my value is {bg.value}")
+my value is 89
 
 >>> try:
 ...     bg.integer_validator("name", "John")
