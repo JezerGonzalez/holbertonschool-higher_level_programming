@@ -3,4 +3,6 @@
 
 
 class BaseGeometry:
+    """Start of the class"""
+
     pass
