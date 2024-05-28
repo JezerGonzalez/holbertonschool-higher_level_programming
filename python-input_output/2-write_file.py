@@ -4,6 +4,5 @@
 
 def append_write(filename="", text=""):
     """Apends and returns number of characters"""
-
-    with open(filename, "w", encoding="utf-8") as file:
+    with open(filename, "a", encoding="utf-8") as file:
         return file.write(text)
