@@ -29,22 +29,13 @@ def profile(username):
 def add_user():
     data = request.json
     username = data.get('username')
-    name = data.get('name')
-    age = data.get('age')
-    city = data.get('city')
 
     if not username:
         return jsonify({'error': 'Username is required'}), 400
-
     if username in users:
         return jsonify({'error': 'User already exists'}), 400
-
     users[username] = data
-
-    return jsonify({
-        'message': 'User added successfully',
-        'user': users[username]
-    })
+    return jsonify({'message': 'User added', 'user': data}), 201
 
 
 @app.route('/data')
