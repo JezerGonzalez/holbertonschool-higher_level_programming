@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Develop a simple API using Python with the `http.server` module"""
-import http.server, json
+import http.server
+import json
 
 
 class Handler(http.server.BaseHTTPRequestHandler):
@@ -25,7 +26,7 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.send_header("Content-type", "application/json")
             self.end_headers()
             sample = {"version": "1.0",
-                    "description": "A simple API built with http.server"}
+                      "description": "A simple API built with http.server"}
             self.wfile.write(json.dumps(sample).encode("utf-8"))
 
         elif self.path == "/status":
@@ -38,7 +39,8 @@ class Handler(http.server.BaseHTTPRequestHandler):
             self.send_response(404)
             self.send_header("Content-type", "text/html")
             self.end_headers()
-            self.wfile.write(b"Undefined endpoint")
+            self.wfile.write(b"Undefined endpoint returned incorrect content")
+
 
 PORT = 8000
 
