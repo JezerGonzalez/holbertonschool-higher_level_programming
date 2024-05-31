@@ -21,7 +21,6 @@ def status():
 @app.route('/user/<username>')
 def profile(username):
     user = users.get(username)
-    user = users.get(username)
     if user:
         return jsonify(user)
     else:
