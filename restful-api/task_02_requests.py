@@ -23,7 +23,7 @@ def fetch_and_save_posts():
 
         with open("posts.csv", 'w', encoding="utf-8") as file:
             map = ['id', 'title', 'body']
-            writer = csv.DictReader(file, fieldnames=map)
+            writer = csv.DictWriter(file, fieldnames=map)
             writer.writeheader()
             for data in data_list:
                 writer.writerow(data)
