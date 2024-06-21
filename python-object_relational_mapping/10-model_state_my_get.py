@@ -6,7 +6,7 @@ from sqlalchemy.orm import sessionmaker
 from model_state import Base, State
 
 if __name__ == "__main__":
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 5:
         print("Wrong input")
 
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
