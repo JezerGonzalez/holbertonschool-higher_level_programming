@@ -1,14 +1,15 @@
 #!/usr/bin/python3
-"""First state model"""
+"""task 14"""
 from sqlalchemy import Column, Integer, String, ForeignKey
-from model_state import Base
 from sqlalchemy.orm import relationship
+from model_state import Base
+
 
 class City(Base):
-    """Start of class"""
-    __tablename__ = 'cities'
-    id = Column("id", Integer, primary_key=True, autoincrement=True,
-                nullable=False)
+    """class defining starte"""
+    __tablename__ = "cities"
+    id = Column("id", Integer, autoincrement=True, primary_key=True)
     name = Column("name", String(128), nullable=False)
-    state_id = Column("state_id", ForeignKey("states.id"), nullable=False)
+    state_id = Column(
+        "state_id", Integer, ForeignKey("states.id"), nullable=False)
     state = relationship("State", back_populates="cities")

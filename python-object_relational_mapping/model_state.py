@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""First state model"""
+"""task 6"""
 from sqlalchemy import Column, Integer, String
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
@@ -8,9 +8,8 @@ Base = declarative_base()
 
 
 class State(Base):
-    """Start of class"""
-    __tablename__ = 'states'
-    id = Column("id", Integer, primary_key=True, autoincrement=True,
-                nullable=False)
+    """class defining starte"""
+    __tablename__ = "states"
+    id = Column("id", Integer, autoincrement=True, primary_key=True)
     name = Column("name", String(128), nullable=False)
-    cities = relationship("cities", back_populates="state")
+    cities = relationship("City", back_populates="state")
