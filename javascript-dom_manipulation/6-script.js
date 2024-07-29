@@ -1,6 +1,16 @@
-addEventListener('DOMContentLoaded', function () {
-    // fuction for updat ing text
-    updateText = () => (document.querySelector('header').innerText = 'New Header!!!');
-    // get element and add eventListener
-    document.querySelector('#update_header').addEventListener('click', updateText);
-});
+function fetchCharFromAPI() {
+    const api = "https://swapi-api.hbtn.io/api/people/5/?format=json";
+    const character = document.querySelector("#character");
+
+    fetch(api)
+        .then((response) => response.json())
+        .then((data) => {
+            const charName = data.name;
+            character.textContent = charName;
+        })
+        .catch((error) => {
+            console.error("Error: ", error);
+        });
+}
+
+fetchCharFromAPI();
